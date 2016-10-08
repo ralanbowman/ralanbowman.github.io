@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>User Personas | Alan Bowman Portfolio</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4005feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Alan Bowman | Technical Writer</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="contact_info.html">Contact</a></li>
+                
+                
+                
+                <li><a href="resumes.html">Resume</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="portfolio.html">Portfolio Overview</a></li>
+                        
+                        
+                        
+                        <li><a href="uses-this-api.html">Uses This API</a></li>
+                        
+                        
+                        
+                        <li><a href="viewdns-api.html">ViewDNS API</a></li>
+                        
+                        
+                        
+                        <li><a href="confluence_install.html">Confluence Install Guide</a></li>
+                        
+                        
+                        
+                        <li><a href="sphinx_install.html">Sphinx Install Guide</a></li>
+                        
+                        
+                        
+                        <li class="dropdownActive"><a href="personas.html">User Personas</a></li>
+                        
+                        
+                        
+                        <li><a href="styleguide-wordlist.html">Style Guide and Word List</a></li>
+                        
+                        
+                        
+                        <li><a href="how_work.html">How I work</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li><a class="email" title="E-mail me" href="#" onclick="javascript:window.location='mailto:alanbowman@gmail.com?subject=Portfolio Questions feedback&body=I would like to discuss your portfolio: ' + window.location.href;"><i class="fa fa-envelope-o"></i> E-mail Me</a><li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="User Personas">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle"> </li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Overview</a>
+        <ul>
+            
+            
+            
+            <li><a href="index.html">About Me</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Portfolio</a>
+        <ul>
+            
+            
+            
+            <li><a href="portfolio.html">Portfolio Overview</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="uses-this-api.html">Uses This API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="viewdns-api.html">ViewDNS API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="confluence_install.html">Confluence Install Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="sphinx_install.html">Sphinx Install Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="personas.html">User Personas</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="styleguide-wordlist.html">Style Guide and Word List</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="how_work.html">How I work</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Resume</a>
+        <ul>
+            
+            
+            
+            <li><a href="resume.html">Resume</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Contact</a>
+        <ul>
+            
+            
+            
+            <li><a href="contact_info.html">Contact Information</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Colophon</a>
+        <ul>
+            
+            
+            
+            <li><a href="colophon.html">Colophon</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">User Personas</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+
+    
+
+    
+
+    
+
+  <p>In user experience (UX) terms, a persona is a fictional character created to represent different types of users, and to give insight into their goals, abilities, and behaviors. A good overview of personas can be found at the <a href="https://www.usability.gov/how-to-and-tools/methods/personas.html" title="usability.gov Personas">usability.gov website</a></p>
+
+<p>Personas are invaluable to a technical writer, because they allow you to write with a particular user in mind, and the documentation can be geared towards that user’s skill set and goals.</p>
+
+<p>I created these personas to use when re-evaluating documentation for a previous employer. I spent time reviewing support tickets for certain products to understand what customers were having trouble with or trying to do, and then looked at some of the demographic information in our CRM system to get a better idea of where our customers were located and any other self-reported information (age, income, etc.). Then I created these personas based on the information I found and my own intuition from dealing directly with our customers.</p>
+
+<p>The <strong>User Personas PDF</strong> is a ready-made version you can use as-is, or you can also download the corresponding <a href="https://www.libreoffice.org/" title="LibreOffice">LibreOffice</a> source doc to use as a starting point to create your own personas (LibreOffice is a free and open source office suite).</p>
+
+<p><strong>Note</strong> - depending on your browser the PDF will either open or download. The LibreOffice doc will download.</p>
+
+<ul>
+  <li><a href="/pages/docs/portfolio/personas/UserPersonas.pdf" title="User Personas - PDF">User Personas PDF</a></li>
+  <li><a href="/pages/docs/portfolio/personas/UserPersonas.odt" title="User Personas - LibreOffice doc">User Personas (LibreOffice source doc)</a></li>
+</ul>
+
+<p>More information about personas can be found here:</p>
+
+<ul>
+  <li><a href="http://dl.acm.org/citation.cfm?id=553473" title="The Inmates Are Running the Asylum">The Inmates Are Running the Asylum: Why High Tech Products Drive Us Crazy and How to Restore the Sanity</a>, by <a href="http://dl.acm.org/author_page.cfm?id=81100287646&amp;" title="Alan Cooper">Alan Cooper</a>. This is the original work on user personas.</li>
+  <li><a href="http://dl.acm.org/citation.cfm?id=1076976" title="The Persona Lifecycle">The Persona Lifecycle: Keeping People in Mind Throughout Product Design</a> by <a href="http://dl.acm.org/author_page.cfm?id=81100291916&amp;coll=DL&amp;dl=ACM&amp;trk=0&amp;cfid=677162671&amp;cftoken=20171751" title="John Pruitt">John Pruitt</a> and <a href="http://dl.acm.org/author_page.cfm?id=81100329618&amp;coll=DL&amp;dl=ACM&amp;trk=0&amp;cfid=677162671&amp;cftoken=20171751" title="Tamara Adlin">Tamara Adlin</a>. This is the standard textbook covering the theory of personas, why and how they work, and how to create them.</li>
+  <li><a href="http://dl.acm.org/citation.cfm?id=1859509" title="The Essential Persona Lifecycle">The Essential Persona Lifecycle: Your Guide to Building and Using Personas</a>, also by Pruitt and Adlin. This is a workbook for creating personas based on “The Persona Lifecycle” that strips out all the theory and just focuses on persona creation. This is the book I used to help create my personas.</li>
+  <li><a href="http://redish.net/books/item/5-letting-go-of-the-words-writing-web-content-that-works" title="Letting Go of the Words">Letting Go of the Words: Writing Web Content that Works</a> by <a href="http://redish.net/about-ginny" title="Ginny Redish">Dr. Ginny Redish</a>. While focused more on website usability, “Letting Go of the Words” has a good section on personas. I was able to attend a conference session given by Dr. Redish several years ago, and that is what started my interest in using personas in my own work.</li>
+</ul>
+
+<hr />
+
+<p>These personas are released under a <a href="https://creativecommons.org/licenses/by/4.0/" title="CC BY">Creative Commons CC BY license</a>, meaning anyone can reuse, tweak, distribute, remix, or build upon them, even commercially, as long as the original author (me) is credited.</p>
+
+<p>The images are courtesy of Freepik.com - <a href="http://www.freepik.com/free-vector/funny-people-avatars_844759.htm" title="Designed by Freepik">Designed by Freepik</a></p>
+
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 Alan Bowman. All rights reserved. <br />
+ Site last generated: Oct 8, 2016 <br />
+<!-- <p><img src="images/company_logo.png" alt="Company logo"/></p> -->
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

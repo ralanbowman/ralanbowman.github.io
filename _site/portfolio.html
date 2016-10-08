@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Portfolio Overview | Alan Bowman Portfolio</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4005feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Alan Bowman | Technical Writer</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="contact_info.html">Contact</a></li>
+                
+                
+                
+                <li><a href="resumes.html">Resume</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li class="dropdownActive"><a href="portfolio.html">Portfolio Overview</a></li>
+                        
+                        
+                        
+                        <li><a href="uses-this-api.html">Uses This API</a></li>
+                        
+                        
+                        
+                        <li><a href="viewdns-api.html">ViewDNS API</a></li>
+                        
+                        
+                        
+                        <li><a href="confluence_install.html">Confluence Install Guide</a></li>
+                        
+                        
+                        
+                        <li><a href="sphinx_install.html">Sphinx Install Guide</a></li>
+                        
+                        
+                        
+                        <li><a href="personas.html">User Personas</a></li>
+                        
+                        
+                        
+                        <li><a href="styleguide-wordlist.html">Style Guide and Word List</a></li>
+                        
+                        
+                        
+                        <li><a href="how_work.html">How I work</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li><a class="email" title="E-mail me" href="#" onclick="javascript:window.location='mailto:alanbowman@gmail.com?subject=Portfolio Questions feedback&body=I would like to discuss your portfolio: ' + window.location.href;"><i class="fa fa-envelope-o"></i> E-mail Me</a><li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Portfolio Overview">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle"> </li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Overview</a>
+        <ul>
+            
+            
+            
+            <li><a href="index.html">About Me</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Portfolio</a>
+        <ul>
+            
+            
+            
+            <li class="active"><a href="portfolio.html">Portfolio Overview</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="uses-this-api.html">Uses This API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="viewdns-api.html">ViewDNS API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="confluence_install.html">Confluence Install Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="sphinx_install.html">Sphinx Install Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="personas.html">User Personas</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="styleguide-wordlist.html">Style Guide and Word List</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="how_work.html">How I work</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Resume</a>
+        <ul>
+            
+            
+            
+            <li><a href="resume.html">Resume</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Contact</a>
+        <ul>
+            
+            
+            
+            <li><a href="contact_info.html">Contact Information</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Colophon</a>
+        <ul>
+            
+            
+            
+            <li><a href="colophon.html">Colophon</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">Portfolio Overview</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+
+    
+
+    
+
+    
+
+  <p>The following are examples of my work in several different contexts: API documentation, traditional user guides, personas, and style guides/word lists.</p>
+
+<p>The UsesThis API and ViewDNS API show how I would document a RESTful API, one using only JSON for requests and responses, and the other using both JSON and XML.</p>
+
+<p>The Confluence and Sphinx install guides were written by request for members of a technical writer mailing list who were evaluating both products but were having difficulty with the technical level of the existing documentation.</p>
+
+<p>The set of Personas was created when I was re-evaluating all our documentation at a previous employer in order to make it more fit for the people who were actually using it.</p>
+
+<p>The Style Guide and Word List were created to ensure that all company communications (documentation, website copy, marketing releases, etc.) were consistent in style and wording.</p>
+
+<p>The How I work section explains some of the tools and methodologies I’ve used to manage projects and produce documentation.</p>
+
+<ul>
+  <li><a href="/uses-this-api.html"><strong>UsesThis / The Setup API</strong></a> - documentation for a small RESTful JSON API</li>
+  <li><a href="/viewdns-api.html"><strong>ViewDNS API</strong></a> - documentation for a small selection of RESTful API calls in JSON and XML</li>
+  <li><a href="/confluence_install.html"><strong>Confluence install guide</strong></a> - instructions on how to install Confluence on a Linux server</li>
+  <li><a href="sphinx_install.html"><strong>Sphinx install guide</strong></a> - instructions on how to install the Sphinx documentation platform on a Linux server</li>
+  <li><a href="/personas.html"><strong>User Personas</strong></a> - a set of personas created to help plan documentation updates for a web hosting company</li>
+  <li><a href="/styleguide-wordlist.html"><strong>Style Guide and Word List</strong></a> - a simple style guide and word list created to make sure that all documentation was consistent</li>
+  <li><a href="/how_work.html"><strong>How I work</strong></a> - an overview of  tools and methods</li>
+</ul>
+
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 Alan Bowman. All rights reserved. <br />
+ Site last generated: Oct 8, 2016 <br />
+<!-- <p><img src="images/company_logo.png" alt="Company logo"/></p> -->
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

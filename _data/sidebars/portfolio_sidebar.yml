@@ -1,0 +1,90 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: 
+  version:
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+      #  - title: Overview
+      # url: /index.html
+      # output: web, pdf
+      # folderitems:
+
+      # - title: About Me
+      # url: /about_me.html
+      # output: web, pdf
+
+  - title: Portfolio
+    output: web, pdf
+    folderitems:
+
+    - title: Portfolio Overview
+      url: /portfolio.html
+      output: web, pdf
+
+    - title: Uses This API 
+      url: /uses-this-api.html
+      output: web, pdf
+
+    - title: ViewDNS API
+      url: /viewdns-api.html
+      output: web, pdf
+
+    - title: Confluence Install Guide
+      url: /confluence_install.html
+      output: web, pdf
+
+    - title: Sphinx Install Guide
+      url: /sphinx_install.html
+      output: web, pdf
+
+    - title: User Personas
+      url: /personas.html
+      output: web, pdf
+
+    - title: Style Guide and Word List
+      url: /styleguide-wordlist.html
+      output: web, pdf
+
+    - title: How I work
+      url: how_work.html
+      output: web, pdf
+
+  - title: Resume
+    output: web, pdf
+    folderitems:
+
+    - title: Resume
+      url: /resume.html
+      output: web, pdf
+
+  - title: Contact 
+    output: web, pdf
+    folderitems:
+
+    - title: Contact Information
+      url: /contact_info.html
+      output: web, pdf
+
+  - title: Colophon
+    output: web, pdf
+    folderitems:
+
+    - title: Colophon
+      url: /colophon.html
+      output: web, pdf
+

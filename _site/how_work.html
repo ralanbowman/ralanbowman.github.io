@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>How I work | Alan Bowman Portfolio</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4005feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Alan Bowman | Technical Writer</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="contact_info.html">Contact</a></li>
+                
+                
+                
+                <li><a href="resumes.html">Resume</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="portfolio.html">Portfolio Overview</a></li>
+                        
+                        
+                        
+                        <li><a href="uses-this-api.html">Uses This API</a></li>
+                        
+                        
+                        
+                        <li><a href="viewdns-api.html">ViewDNS API</a></li>
+                        
+                        
+                        
+                        <li><a href="confluence_install.html">Confluence Install Guide</a></li>
+                        
+                        
+                        
+                        <li><a href="sphinx_install.html">Sphinx Install Guide</a></li>
+                        
+                        
+                        
+                        <li><a href="personas.html">User Personas</a></li>
+                        
+                        
+                        
+                        <li><a href="styleguide-wordlist.html">Style Guide and Word List</a></li>
+                        
+                        
+                        
+                        <li class="dropdownActive"><a href="how_work.html">How I work</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li><a class="email" title="E-mail me" href="#" onclick="javascript:window.location='mailto:alanbowman@gmail.com?subject=Portfolio Questions feedback&body=I would like to discuss your portfolio: ' + window.location.href;"><i class="fa fa-envelope-o"></i> E-mail Me</a><li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="How I work">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle"> </li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Overview</a>
+        <ul>
+            
+            
+            
+            <li><a href="index.html">About Me</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Portfolio</a>
+        <ul>
+            
+            
+            
+            <li><a href="portfolio.html">Portfolio Overview</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="uses-this-api.html">Uses This API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="viewdns-api.html">ViewDNS API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="confluence_install.html">Confluence Install Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="sphinx_install.html">Sphinx Install Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="personas.html">User Personas</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="styleguide-wordlist.html">Style Guide and Word List</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="how_work.html">How I work</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Resume</a>
+        <ul>
+            
+            
+            
+            <li><a href="resume.html">Resume</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Contact</a>
+        <ul>
+            
+            
+            
+            <li><a href="contact_info.html">Contact Information</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Colophon</a>
+        <ul>
+            
+            
+            
+            <li><a href="colophon.html">Colophon</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">How I work</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+
+    
+
+    
+
+    
+
+  <p>When I started at my previous employer in 2007 there were 11 employees and no technical writer. Any user documentation was done either by someone in Sales or by one of the application maintainers. I started taking on the tech writer responsibility in addition to my normal tech support and system admin duties, and eventually technical writing became my full-time job.</p>
+
+<p>I was responsible for creating and maintaining all user-facing documentation and release notes, as well as doing the majority of all testing and QA. I also worked with Sales and Marketing to help present a consistent message between the website copy for new products and services and the information presented in the user documentation.</p>
+
+<p>Because I was not only the lone writer but the very first employee in that position, I was able to develop my own procedures and methods for managing my writing projects and moving my documentation from draft into production, as well as decide on the tools to use to actually create the documentation.</p>
+
+<h2 id="project-management">Project management</h2>
+
+<p>The two owners of the company were both former CPAs, with Master’s degrees in Accounting. Excel was their native language, and since they both relied on spreadsheets to manage their projects and company projects, I decided to do the same rather than try to introduce a new tool into the company workflow. In order to avoid having to e-mail a new copy of a spreadsheet every time I updated something, I created spreadsheets using the company Google Apps account. This meant that anyone who needed to check my progress on a particular project or document was able to do so.</p>
+
+<p>Because I was a lone writer and involved in projects in every department in the company, it was essential that I had a way to track where I was on a particular document or project. I would start my Monday with a carefully planned list of what I was going to work on that week, only to have everything turned upside down within the first hour of my workday because the dev team was ready to move a new service into production and I needed to switch gears and work on that. Sometimes weeks would go by before I could get back to what I was originally working on.</p>
+
+<p>Over time, I noticed that all my documentation moved through four distinct phases: pre-production, production, review, and publication, and that each phase had several high-level steps that I needed to work through. It took several years and a number of iterations to put together the current version of my publication checklist, but I’ve found that it to be an extremely valuable tool to help me manage my work.</p>
+
+<p><strong>Publication Checklist Template</strong>- <a href="https://docs.google.com/spreadsheets/d/1nx0tdGrUMTLd5dLr8ioB4WH5YXAhnSlF80btHBDX1Tk/edit?usp=sharing" title="Publication Checklist Template - Google Sheet">Google Sheet</a> / <a href="/pages/docs/portfolio/how_work/PublicationChecklists.ods" title="Publication Checklist Tempate - LibreOffice">LibreOffice Calc</a> - this has a bare copy to use as a template, and second sheet that shows how the checklist looks in production</p>
+
+<p><strong>Note</strong> - feel free to download, use, remix, or redo these checklists for your own use.</p>
+
+<p>The Publication Checklist makes use of conditional formatting, meaning that I could type in <code class="highlighter-rouge">done</code>, <code class="highlighter-rouge">ip</code> (in progress), <code class="highlighter-rouge">na</code> (not applicable), or <code class="highlighter-rouge">prob</code> (problem) into a cell and that cell would change color accordingly. This allowed anyone to see at a glance the status of a particular document. (Note - the conditional formatting may not survive the download).</p>
+
+<p>I’ve used the same general concept to manage other documentation projects. For example, I used a spreadsheet to manage the production for the <a href="/uses-this-api.html" title="Uses This API">Uses This API</a> that is included with this portfolio: <a href="https://docs.google.com/spreadsheets/d/1cWlj3rzlLWvxKwFRGX6fF0QUBLq-8yAazQNwmgTTX9Y/edit?usp=sharing" title="Uses This Publication Checklist">Google Sheet</a>.</p>
+
+<h2 id="documentation-tools">Documentation tools</h2>
+
+<p>As a web hosting company, my former employer relied heavily on open source software. Servers were usually CentOS Linux, and the company specialized in Java application server hosting: Tomcat, JBoss, GlassFish, and WildFly.</p>
+
+<p>Coming from a Linux system admin background, I decided to stay with the tools I was already familiar with, such as Vim and Git. I needed a way to create HTML output, because the documentation I created would be hosted on a knowledge base platform bundled with our ticket system and it only understood HTML. I also needed a way to keep everything under revision control in case I needed to revert a document back to a previous version.</p>
+
+<p>After some experimentation, I settled on the following toolset:</p>
+
+<ul>
+  <li><a href="http://www.vim.org" title="Vim"><strong>Vim</strong></a> - for text editing</li>
+  <li><a href="https://en.wikipedia.org/wiki/Markdown" title="Markdown"><strong>Markdown</strong></a> - for formatting</li>
+  <li><a href="http://pandoc.org/" title="Pandoc"><strong>Pandoc</strong></a> - to convert from Markdown to HTML (with sections added to my .vimrc to help automate this task)</li>
+  <li><a href="http://gitolite.com/gitolite/index.html" title="Gitolite"><strong>Gitolite</strong></a> - to manage all document version control</li>
+</ul>
+
+<p>Overall, this is a fairly simple toolset, but it did the job I needed it to do. Using lightweight tools allowed me to move quickly and without a lot of application overhead. This toolset also meant that anyone with a passing familiarity with Vim (something very common amongst Linux system admins) could easily step in and create or update documentation, instead of having to learn a more complex tool like FrameMaker.</p>
+
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 Alan Bowman. All rights reserved. <br />
+ Site last generated: Oct 8, 2016 <br />
+<!-- <p><img src="images/company_logo.png" alt="Company logo"/></p> -->
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

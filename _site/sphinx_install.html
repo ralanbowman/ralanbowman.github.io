@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Sphinx Install Guide | Alan Bowman Portfolio</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4005feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Alan Bowman | Technical Writer</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="contact_info.html">Contact</a></li>
+                
+                
+                
+                <li><a href="resumes.html">Resume</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="portfolio.html">Portfolio Overview</a></li>
+                        
+                        
+                        
+                        <li><a href="uses-this-api.html">Uses This API</a></li>
+                        
+                        
+                        
+                        <li><a href="viewdns-api.html">ViewDNS API</a></li>
+                        
+                        
+                        
+                        <li><a href="confluence_install.html">Confluence Install Guide</a></li>
+                        
+                        
+                        
+                        <li class="dropdownActive"><a href="sphinx_install.html">Sphinx Install Guide</a></li>
+                        
+                        
+                        
+                        <li><a href="personas.html">User Personas</a></li>
+                        
+                        
+                        
+                        <li><a href="styleguide-wordlist.html">Style Guide and Word List</a></li>
+                        
+                        
+                        
+                        <li><a href="how_work.html">How I work</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li><a class="email" title="E-mail me" href="#" onclick="javascript:window.location='mailto:alanbowman@gmail.com?subject=Portfolio Questions feedback&body=I would like to discuss your portfolio: ' + window.location.href;"><i class="fa fa-envelope-o"></i> E-mail Me</a><li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Sphinx Install Guide">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle"> </li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Overview</a>
+        <ul>
+            
+            
+            
+            <li><a href="index.html">About Me</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Portfolio</a>
+        <ul>
+            
+            
+            
+            <li><a href="portfolio.html">Portfolio Overview</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="uses-this-api.html">Uses This API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="viewdns-api.html">ViewDNS API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="confluence_install.html">Confluence Install Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="sphinx_install.html">Sphinx Install Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="personas.html">User Personas</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="styleguide-wordlist.html">Style Guide and Word List</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="how_work.html">How I work</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Resume</a>
+        <ul>
+            
+            
+            
+            <li><a href="resume.html">Resume</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Contact</a>
+        <ul>
+            
+            
+            
+            <li><a href="contact_info.html">Contact Information</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Colophon</a>
+        <ul>
+            
+            
+            
+            <li><a href="colophon.html">Colophon</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">Sphinx Install Guide</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+
+    
+
+    
+
+    
+
+  <p>At a previous employer I was asked to find and evaluate several solutions to replace our existing knowledge base platform, which was basically an afterthought tacked on to the ticket system we used for support requests.</p>
+
+<p>One of the solutions I looked at was <a href="http://www.sphinx-doc.org/en/stable/index.html" title="Sphinx Documentation Generator">Sphinx</a>, a documentation generator written in Python. I found it very poorly documented and difficult to install, and so moved on to other potential solutions. However, I really wanted to take a closer look at Sphinx, so after working through the instructions found from various sources online, I was able to get a working install. Several people on a technical writer mailing list I’m on asked about the instructions, so I created an install guide they could use themselves to get started.</p>
+
+<p><strong>Note</strong> - this was written using a less formal tone than a conventional user guide or install guide, because I was writing for people of a similar skill level and who wanted a quick overview, not a detailed reference guide.</p>
+
+<hr />
+
+<h1 id="installing-sphinx-on-a-centos-6-virtual-server">Installing Sphinx On a CentOS 6 Virtual Server</h1>
+
+<h3 id="before-you-begin">Before you begin</h3>
+
+<p>These install notes assume the following:</p>
+
+<ul>
+  <li>You have access to a Linux server (either a physical server or a virtual server) and can work from the command line as the root user</li>
+  <li>You are able to navigate the Linux file system, install software from the command line, edit files with a text editor, and run shell commands</li>
+  <li>There is a non-root user associated with the domain where you will be serving your documentation from, and you are able to work as that user (domains are associated with a non-root user for security reasons)</li>
+</ul>
+
+<p>These notes are specific to CentOS 6 and the Apache web server. If you have a different distro and web server, you will need to adapt these notes to your situation.</p>
+
+<p>This is my current hardware setup:</p>
+
+<ul>
+  <li>OS - CentOS release 6.6 (Final)</li>
+  <li>RAM - 512 MB</li>
+  <li>HDD - 8 GB disk / 1 GB swap</li>
+</ul>
+
+<p>Web server setup:</p>
+
+<ul>
+  <li>Apache web server</li>
+  <li>Domain of <em>docs.example.com</em> in DNS with the A record pointing to the public IP of the server</li>
+  <li>DocumentRoot for the website set to <em>$DEFAULT_WEBSERVER_PATH/docs.example.com/build/html</em></li>
+</ul>
+
+<p><a href="#installing-sphinx">Installing Sphinx</a><br />
+<a href="#sphinx-startup-and-configuration">Sphinx Startup and Configuration</a><br />
+<a href="#my-current-workflow">My Current Workflow</a></p>
+
+<hr />
+
+<h2 id="installing-sphinx">Installing Sphinx</h2>
+
+<p>Sphinx requires Python 2.6 up to Python 3.3. Most Linux distros should have Python installed as part of the base OS.</p>
+
+<p>You will need to install several applications before installing Sphinx:</p>
+
+<ul>
+  <li>CentOS Development tools</li>
+  <li>Python Setuptools (this installs the Python <em>easy_install</em> application)</li>
+  <li>Docutils (installed with <em>easy_install</em>)</li>
+  <li>Jinja2 (installed with <em>easy_install</em>)</li>
+  <li>Pygments (installed with <em>easy_install</em>)</li>
+  <li>pip (used to install Sphinx)</li>
+</ul>
+
+<p>Once these applications are installed, you can then install Sphinx.</p>
+
+<h3 id="centos-development-tools">CentOS Development tools</h3>
+
+<p>The CentOS Development tools are a set of applications used to install, manage, and develop software.  They are usually necessary for installing software that did not come with the base OS install.</p>
+
+<p>The Development tools are installed as the root user with <em>yum</em>:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>yum groupinstall <span class="s2">"Development tools"</span>
+</code></pre>
+</div>
+
+<h3 id="python-setuptools">Python Setuptools</h3>
+
+<p>The Python Setuptools are a group of Python tools used to install Python modules and libraries. In this case, the Python Setuptools are used to install the <em>easy_install</em> package, which will then be used to install several other applications needed by Sphinx.</p>
+
+<p>The Python Setuptools are downloaded as the root user with <em>wget</em>, and then processed through Python:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>wget https://bootstrap.pypa.io/ez_setup.py -O - | python
+</code></pre>
+</div>
+
+<h3 id="docutils">Docutils</h3>
+
+<p>The Docutils are used by Sphinx to process and format text.</p>
+
+<p>The Docutils are installed as the root user using <em>easy_install</em>, which was installed as part of the Python Setuptools:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>easy_install docutils
+</code></pre>
+</div>
+
+<h3 id="jinja2">Jinja2</h3>
+
+<p>Jinja2 is used as part of the Sphinx template engine.</p>
+
+<p>Jinja2 is installed as the root user using <em>easy_install</em>:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>easy_install Jinja2
+</code></pre>
+</div>
+
+<h3 id="pygments">Pygments</h3>
+
+<p>Pygments is a syntax highlighting library for Python, used by Sphinx to show colored syntax in source code blocks.</p>
+
+<p>Pygments is installed as the root user using <em>easy_install</em>:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>easy_install pygments
+</code></pre>
+</div>
+
+<h3 id="pip">pip</h3>
+
+<p><em>pip</em> is another tool used to download and install Python packages and modules. <em>pip</em> has to be downloaded first, and then installed.</p>
+
+<p>Download <em>pip</em> as the root user with the <em>wget</em> command:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>wget https://bootstrap.pypa.io/get-pip.py
+</code></pre>
+</div>
+
+<p>Install <em>pip</em> as the root user with Python:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>python get-pip.py
+</code></pre>
+</div>
+
+<h3 id="installing-sphinx-1">Installing Sphinx</h3>
+
+<p>Installing Sphinx is fairly straight forward. Assuming you have installed all the software listed above, do the following as the root user:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>pip install Sphinx
+</code></pre>
+</div>
+
+<p>This will scroll some output on your screen, and eventually drop you back to the command prompt. Assuming there are no errors, you can now start Sphinx and begin the setup process.</p>
+
+<hr />
+
+<h2 id="sphinx-startup-and-configuration">Sphinx Startup and Configuration</h2>
+
+<p>From this point forward you will need to work as the non-root user who owns the domain and web server files. Generally you will switch from the root user to the non-root user with the <strong><code class="highlighter-rouge">su - non_root_user</code></strong> command:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>su - non_root_user
+</code></pre>
+</div>
+
+<p>The <strong><code class="highlighter-rouge">-</code></strong> switch tells the system that you’re switching users (<strong><code class="highlighter-rouge">su</code></strong>) and that you’re using the <code class="highlighter-rouge">$PATH</code> and local
+directories for that user.</p>
+
+<p>Change directories to the location where you want to serve your documentation from. In this case, I changed to the default DocumentRoot for the domain, <em>/var/www/non_root_user/data/www/docs.example.com</em> - your location will certainly be different.</p>
+
+<p>After the install was complete, I changed the DocumentRoot for the website in the Apache configuration to point to the directory where Sphinx will put the docs, but that is not required.</p>
+
+<h3 id="sphinx-quickstart">Sphinx Quickstart</h3>
+
+<p>Sphinx comes with a utility to get your configuration in place, called <em>sphinx-quickstart</em>. Run this as the non-root user:</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code>sphinx-quickstart
+</code></pre>
+</div>
+
+<p>The <em>sphinx-quickstart</em> utility will run through the configuration options. Generally, you can accept the defaults, but here are the options I set manually:</p>
+
+<ul>
+  <li>Separated source and build directories - say Yes here (default is No)</li>
+  <li>Autodoc - say Yes here (default is no)</li>
+  <li>Create make scripts - I forget the exact wording, but you are asked to create a script and a Windows
+bat file that let you generate your documentation from the source directory into the build directory.
+Say Yes here, it will make your life easier.</li>
+</ul>
+
+<p>Once the <em>sphinx-quickstart</em> script completes, you will have two new directories: <em>source</em> and <em>build</em>. All the files you create are in <em>source</em>, and all the files being served by Sphinx are in <em>build</em>.</p>
+
+<p>At this point you can work from the <a href="http://www.sphinx-doc.org/en/stable/intro.html" title="Sphinx Intro Docs">official Sphinx docs</a> to continue your setup and start creating docs and working with Sphinx.</p>
+
+<hr />
+
+<h2 id="my-current-workflow">My Current Workflow</h2>
+
+<p>My current workflow for Sphinx looks like this:</p>
+
+<ol>
+  <li>Edit the files in the <em>source</em> directory - these are <em>.rst</em> files (reStructuredText) files.</li>
+  <li>From the Sphinx install directory, run the <strong>make html</strong> command - this runs an html processor on the <em>.rst</em> files in <em>source</em>, and creates the output in the <em>build</em> directory.  For example:</li>
+</ol>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">-bash-4.1$ </span><span class="nb">pwd</span>
+/var/www/docs_user/data/www/docs.eapps-example.com
+<span class="gp">-bash-4.1$ </span>vim <span class="nb">source</span>/SphinxInstall.rst
+<span class="gp">-bash-4.1$ </span>make html
+</code></pre>
+</div>
+
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 Alan Bowman. All rights reserved. <br />
+ Site last generated: Oct 8, 2016 <br />
+<!-- <p><img src="images/company_logo.png" alt="Company logo"/></p> -->
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

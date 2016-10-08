@@ -1,0 +1,226 @@
+[
+
+
+
+
+{
+"title": "About Me",
+"tags": "",
+"keywords": "",
+"url": "about_me.html",
+"summary": ""
+},
+
+
+
+{
+"title": "Colophon",
+"tags": "",
+"keywords": "",
+"url": "colophon.html",
+"summary": ""
+},
+
+
+
+{
+"title": "Confluence Install Guide",
+"tags": "",
+"keywords": "",
+"url": "confluence_install.html",
+"summary": ""
+},
+
+
+
+{
+"title": "Contact Information",
+"tags": "",
+"keywords": "",
+"url": "contact_info.html",
+"summary": ""
+},
+
+
+
+
+
+{
+"title": "How I work",
+"tags": "",
+"keywords": "",
+"url": "how_work.html",
+"summary": ""
+},
+
+
+
+{
+"title": "About Me",
+"tags": "",
+"keywords": "homepage",
+"url": "index.html",
+"summary": ""
+},
+
+
+
+{
+"title": "Scroll layout",
+"tags": "special_layouts",
+"keywords": "json, scrolling, scrollto, jquery plugin",
+"url": "jsmydoc_scroll.html",
+"summary": "This page demonstrates how you the integration of a script called ScrollTo, which is used here to link definitions of a JSON code sample to a list of definitions for that particular term. The scenario here is that the JSON blocks are really long, with extensive nesting and subnesting, which makes it difficult for tables below the JSON to adequately explain the term in a usable way."
+},
+
+
+
+{
+"title": "News",
+"tags": "",
+"keywords": "news, blog, updates, release notes, announcements",
+"url": "news.html",
+"summary": ""
+},
+
+
+
+{
+"title": "News",
+"tags": "",
+"keywords": "news, blog, updates, release notes, announcements",
+"url": "news_archive.html",
+"summary": ""
+},
+
+
+
+{
+"title": "User Personas",
+"tags": "",
+"keywords": "",
+"url": "personas.html",
+"summary": ""
+},
+
+
+
+{
+"title": "Portfolio Overview",
+"tags": "",
+"keywords": "",
+"url": "portfolio.html",
+"summary": ""
+},
+
+
+
+
+
+
+
+
+
+{
+"title": "Sphinx Install Guide",
+"tags": "",
+"keywords": "",
+"url": "sphinx_install.html",
+"summary": ""
+},
+
+
+
+{
+"title": "In-house Style Guide and Word List",
+"tags": "",
+"keywords": "",
+"url": "styleguide-wordlist.html",
+"summary": ""
+},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+"title": "Documentation for the Uses This API",
+"tags": "",
+"keywords": "",
+"url": "uses-this-api.html",
+"summary": ""
+},
+
+
+
+{
+"title": "Documentation for the ViewDNS API",
+"tags": "",
+"keywords": "",
+"url": "viewdns-api.html",
+"summary": ""
+},
+
+
+
+
+
+{
+"title": "Sample post",
+"tags": "newsgetting_started",
+"keywords": "",
+"url": "/samplepost.html",
+"summary": "This is some summary frontmatter for my sample post."
+}
+,
+
+
+{
+"title": "Welcome to Jekyll!",
+"tags": "news",
+"keywords": "",
+"url": "/myupdate.html",
+"summary": ""
+}
+,
+
+
+{
+"title": "Test post from last year",
+"tags": "news",
+"keywords": "",
+"url": "/test-post-from-last-year.html",
+"summary": ""
+}
+
+
+
+]

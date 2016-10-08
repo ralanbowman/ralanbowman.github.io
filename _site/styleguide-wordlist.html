@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>In-house Style Guide and Word List | Alan Bowman Portfolio</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4005feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Alan Bowman | Technical Writer</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="contact_info.html">Contact</a></li>
+                
+                
+                
+                <li><a href="resumes.html">Resume</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="portfolio.html">Portfolio Overview</a></li>
+                        
+                        
+                        
+                        <li><a href="uses-this-api.html">Uses This API</a></li>
+                        
+                        
+                        
+                        <li><a href="viewdns-api.html">ViewDNS API</a></li>
+                        
+                        
+                        
+                        <li><a href="confluence_install.html">Confluence Install Guide</a></li>
+                        
+                        
+                        
+                        <li><a href="sphinx_install.html">Sphinx Install Guide</a></li>
+                        
+                        
+                        
+                        <li><a href="personas.html">User Personas</a></li>
+                        
+                        
+                        
+                        <li class="dropdownActive"><a href="styleguide-wordlist.html">Style Guide and Word List</a></li>
+                        
+                        
+                        
+                        <li><a href="how_work.html">How I work</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li><a class="email" title="E-mail me" href="#" onclick="javascript:window.location='mailto:alanbowman@gmail.com?subject=Portfolio Questions feedback&body=I would like to discuss your portfolio: ' + window.location.href;"><i class="fa fa-envelope-o"></i> E-mail Me</a><li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="In-house Style Guide and Word List">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle"> </li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Overview</a>
+        <ul>
+            
+            
+            
+            <li><a href="index.html">About Me</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Portfolio</a>
+        <ul>
+            
+            
+            
+            <li><a href="portfolio.html">Portfolio Overview</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="uses-this-api.html">Uses This API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="viewdns-api.html">ViewDNS API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="confluence_install.html">Confluence Install Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="sphinx_install.html">Sphinx Install Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="personas.html">User Personas</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="styleguide-wordlist.html">Style Guide and Word List</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="how_work.html">How I work</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Resume</a>
+        <ul>
+            
+            
+            
+            <li><a href="resume.html">Resume</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Contact</a>
+        <ul>
+            
+            
+            
+            <li><a href="contact_info.html">Contact Information</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Colophon</a>
+        <ul>
+            
+            
+            
+            <li><a href="colophon.html">Colophon</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">In-house Style Guide and Word List</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+
+    
+
+    
+
+    
+
+  <p>As the lone technical writer at a previous employer, I was on my own when it came to choosing tools and setting standards. In order to keep things consistent, I created a style guide and word list. Not wanting to reinvent the wheel, I borrowed heavily from the <a href="http://chimera.labs.oreilly.com/books/1230000000969/index.html “O’Reilly Stylesheet and Word List”">O’Reilly Stylesheet and Word List</a>, and because I knew through user research that the vast majority of our customers were using Windows systems, the <a href="https://www.microsoftpressstore.com/store/microsoft-manual-of-style-9780735648715 “MMoS v4”">Microsoft Manual of Style</a>.</p>
+
+<p>Starting with this foundation, I created an in-house style guide and word list that could be used by anyone in the company to make sure that any content we created: user guides, release notes, support ticket replies, website copy, JIRA issues, or Confluence pages, all had a consistent style and look.</p>
+
+<hr />
+
+<h1 id="style-guide-and-word-list">Style Guide and Word List</h1>
+
+<h2 id="style-guide---typography-and-font-conventions">Style Guide - Typography and Font Conventions</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type of element in document</th>
+      <th>Typography or font used</th>
+      <th>Example</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Filename</td>
+      <td>Italic</td>
+      <td><em>httpd.conf</em></td>
+      <td>Use for standalone file names</td>
+    </tr>
+    <tr>
+      <td>Directory path</td>
+      <td>Italic</td>
+      <td><em>/etc/httpd/conf</em></td>
+      <td>Use bold and italic if the directory path needs to be emphasized</td>
+    </tr>
+    <tr>
+      <td>URLs</td>
+      <td>Italic</td>
+      <td><em>http://example.com</em>, <strong><em>example.com</em></strong></td>
+      <td>Use bold and italic if the URL needs to be emphasized</td>
+    </tr>
+    <tr>
+      <td>Links</td>
+      <td>Body font</td>
+      <td><a href="#HREF">Link to an anchor</a></td>
+      <td>Links (not URLs) to heading anchors or doc sections</td>
+    </tr>
+    <tr>
+      <td>Linux commands</td>
+      <td>Monospace bold italic</td>
+      <td><strong><em><code class="highlighter-rouge">cd /etc/httpd</code></em></strong></td>
+      <td>Make sure that any dashes (<code class="highlighter-rouge">---</code>) show up correctly</td>
+    </tr>
+    <tr>
+      <td>Command names</td>
+      <td>Monospace</td>
+      <td><code class="highlighter-rouge">cat</code>, <code class="highlighter-rouge">cd</code>, <code class="highlighter-rouge">netstat -rn</code></td>
+      <td>This is for standalone command names. Make sure that any dashes (<code class="highlighter-rouge">-</code>) show up correctly</td>
+    </tr>
+    <tr>
+      <td>Command line (CLI) placeholder names</td>
+      <td>Monospace italic</td>
+      <td><code class="highlighter-rouge">login:</code> <em><code class="highlighter-rouge">username</code></em></td>
+      <td>CLI placeholders are where the user will have to type something in at the command line</td>
+    </tr>
+    <tr>
+      <td>GUI placeholder names</td>
+      <td>Italic</td>
+      <td>Login: <em>username</em></td>
+      <td>GUI placeholders are where the user will have to type something in from a GUI (dialog box, etc.)</td>
+    </tr>
+    <tr>
+      <td>E-mail address</td>
+      <td>Italic</td>
+      <td><em>user@example.com</em></td>
+      <td>Make the e-mail address a <code class="highlighter-rouge">mailto</code> link if needed</td>
+    </tr>
+    <tr>
+      <td>Service names</td>
+      <td>Lowercase italic</td>
+      <td><em>glassfish</em>, <em>jboss</em>, <em>sendmail</em></td>
+      <td>These are the names of the application service, not the proper name of the application</td>
+    </tr>
+    <tr>
+      <td>Page or document titles</td>
+      <td>Bold</td>
+      <td><strong>Name of Page</strong>, <strong>Document Title</strong></td>
+      <td>Use for the name of a page or document</td>
+    </tr>
+    <tr>
+      <td>GUI navigation</td>
+      <td>Bold italic, right angle bracket</td>
+      <td><strong><em>Path</em></strong> &gt; <strong><em>to</em></strong> &gt; <strong><em>location</em></strong></td>
+      <td>Use to show navigation through a GUI (similar to breadcrumbs)</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="word-list">Word List</h2>
+
+<p><strong>Numbers/Symbols</strong>  <br />
+[ ] left/right bracket   <br />
+{ } left/right brace   <br />
+&lt; &gt; angle brackets   <br />
+~ tilde    <br />
+32 bit   <br />
+64 bit</p>
+
+<p><strong>A</strong>  <br />
+Apache web server</p>
+
+<p><strong>B</strong>  <br />
+back up (v) <br />
+backup (n) <br />
+bandwidth</p>
+
+<p><strong>C</strong>  <br />
+Confluence</p>
+
+<p><strong>E</strong>  <br />
+e-mail/email (be consistent)</p>
+
+<p><strong>F</strong>  <br />
+FTP (n)  <br />
+FTP client   <br />
+FTP server  <br />
+ftpd (service)</p>
+
+<p><strong>G</strong>    <br />
+GB (gigabyte)      <br />
+Git (n)      <br />
+git (service)     <br />
+GlassFish (n)     <br />
+glassfish (service)</p>
+
+<p><strong>H</strong>    <br />
+home page   <br />
+hostname   <br />
+HTML  <br />
+HTTP (server)   <br />
+httpd (service)</p>
+
+<p><strong>I</strong>  <br />
+I/O   <br />
+Internet   <br />
+intranet   <br />
+IP   <br />
+IPsec</p>
+
+<p><strong>J</strong><br />
+Jelastic (n) <br />
+JBoss (n) <br />
+jboss (service) <br />
+JIRA</p>
+
+<p><strong>K</strong><br />
+k (1000)<br />
+K (1024)<br />
+kb (kilobit) <br />
+KB (kilobyte)</p>
+
+<p><strong>L</strong><br />
+Liferay <br />
+Liferay-Portal-GlassFish (n) <br />
+liferay-portal-glassfish (service) <br />
+Liferay-Portal-Tomcat (n) <br />
+liferay-portal-tomcat (service)</p>
+
+<p><strong>M</strong><br />
+Mb (megabit) <br />
+MB (megabyte) <br />
+MySQL (n) <br />
+mysql (service)</p>
+
+<p><strong>P</strong><br />
+Page (a Confluence Page) <br />
+PaaS<br />
+Platform as a Service <br />
+PostgreSQL (n) <br />
+postgresql (service)</p>
+
+<p><strong>Q</strong><br />
+QTS</p>
+
+<p><strong>R</strong><br />
+R1Soft<br />
+rails (service) <br />
+RoR (n)<br />
+Ruby (n)<br />
+Ruby on Rails (n)</p>
+
+<p><strong>S</strong><br />
+Sendmail (n)<br />
+sendmail (service)<br />
+Space (a Confluence Space) <br />
+Subversion (n)<br />
+SVN (n)<br />
+svn (service)</p>
+
+<p><strong>T</strong><br />
+Tomcat (n) <br />
+tomcat (service)</p>
+
+<p><strong>V</strong><br />
+Virtual Cloud Server (the hosting platform)<br />
+Virtual Machine (deprecated, use Virtual Server) <br />
+Virtual Machine in the Cloud (the hosting platform) <br />
+Virtual Server<br />
+Virtuozzo<br />
+VM (deprecated, use VS)<br />
+VPS<br />
+VS</p>
+
+<p><strong>W</strong><br />
+web page <br />
+web server<br />
+website <br />
+WildFly 8 (n)<br />
+WildFly 10 (n)<br />
+wildfly (service)<br />
+Windows 2000 <br />
+Windows 7 <br />
+Windows 8 <br />
+Windows 95 <br />
+Windows 98 <br />
+Windows NT <br />
+Windows Vista <br />
+Windows XP</p>
+
+<p><strong>X</strong><br />
+xinetd <br />
+xinetd.conf <br />
+xinetd.d</p>
+
+<p><strong>Y</strong><br />
+Yum (n)<br />
+yum (service)</p>
+
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 Alan Bowman. All rights reserved. <br />
+ Site last generated: Oct 8, 2016 <br />
+<!-- <p><img src="images/company_logo.png" alt="Company logo"/></p> -->
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>

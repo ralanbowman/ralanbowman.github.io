@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content=" ">
+<title>Documentation for the ViewDNS API | Alan Bowman Portfolio</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<link rel="stylesheet" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4005feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Alan Bowman | Technical Writer</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                
+                
+                
+                <li><a href="contact_info.html">Contact</a></li>
+                
+                
+                
+                <li><a href="resumes.html">Resume</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="portfolio.html">Portfolio Overview</a></li>
+                        
+                        
+                        
+                        <li><a href="uses-this-api.html">Uses This API</a></li>
+                        
+                        
+                        
+                        <li class="dropdownActive"><a href="viewdns-api.html">ViewDNS API</a></li>
+                        
+                        
+                        
+                        <li><a href="confluence_install.html">Confluence Install Guide</a></li>
+                        
+                        
+                        
+                        <li><a href="sphinx_install.html">Sphinx Install Guide</a></li>
+                        
+                        
+                        
+                        <li><a href="personas.html">User Personas</a></li>
+                        
+                        
+                        
+                        <li><a href="styleguide-wordlist.html">Style Guide and Word List</a></li>
+                        
+                        
+                        
+                        <li><a href="how_work.html">How I work</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+			<li><a class="email" title="E-mail me" href="#" onclick="javascript:window.location='mailto:alanbowman@gmail.com?subject=Portfolio Questions feedback&body=I would like to discuss your portfolio: ' + window.location.href;"><i class="fa fa-envelope-o"></i> E-mail Me</a><li>
+
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Documentation for the ViewDNS API">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+    <!-- Content Row -->
+    <div class="row">
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="mysidebar" class="nav">
+    <li class="sidebarTitle"> </li>
+    
+    
+    
+        
+    
+    <li>
+        <a href="#">Overview</a>
+        <ul>
+            
+            
+            
+            <li><a href="index.html">About Me</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Portfolio</a>
+        <ul>
+            
+            
+            
+            <li><a href="portfolio.html">Portfolio Overview</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="uses-this-api.html">Uses This API</a></li>
+            
+            
+            
+            
+            
+            
+            <li class="active"><a href="viewdns-api.html">ViewDNS API</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="confluence_install.html">Confluence Install Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="sphinx_install.html">Sphinx Install Guide</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="personas.html">User Personas</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="styleguide-wordlist.html">Style Guide and Word List</a></li>
+            
+            
+            
+            
+            
+            
+            <li><a href="how_work.html">How I work</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Resume</a>
+        <ul>
+            
+            
+            
+            <li><a href="resume.html">Resume</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Contact</a>
+        <ul>
+            
+            
+            
+            <li><a href="contact_info.html">Contact Information</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+    
+    <li>
+        <a href="#">Colophon</a>
+        <ul>
+            
+            
+            
+            <li><a href="colophon.html">Colophon</a></li>
+            
+            
+            
+            
+        </ul>
+        
+        
+        
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+    <!-- Content Column -->
+    <div class="col-md-9">
+        <div class="post-header">
+   <h1 class="post-title-main">Documentation for the ViewDNS API</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+
+    
+
+    
+
+    
+
+    
+
+  <p><a href="http://viewdns.info" title="ViewDNS">ViewDNS</a> offers a free suite of tools for anyone who needs to test or troubleshoot their DNS setup. You can view the DNS settings for any website, check if your DNS changes have propagated across the Internet, and even see if a website is accessible from behind the Great Firewall of China.</p>
+
+<p>During my years as a system administrator, and even as a technical writer doing application testing, I made frequent use of the tools available from ViewDNS to help troubleshoot any DNS issues that I encountered.</p>
+
+<p>ViewDNS offers a <a href="http://viewdns.info/api/" title="ViewDNS API">RESTful API</a> with responses in both JSON and XML. The <a href="http://viewdns.info/api/docs/" title="ViewDNS API docs">existing documentation</a> is workable, but as a technical writer I thought it could be better. I’ve updated a few of their existing API calls to make them more useable and with the needs of a developer in mind.</p>
+
+<p><strong>Note</strong> - I am not affiliated with ViewDNS, I’m just someone who has used their tools for years and thought their API documentation could use some updating.</p>
+
+<hr />
+
+<h1 id="viewdns-api">ViewDNS API</h1>
+
+<p>An API to query the tools available at <a href="http://viewdns.info">ViewDNS</a>. Requests and responses are available in JSON and XML.</p>
+
+<p><strong>NOTE</strong> - you need to register for an API key in order to use this API. More information is available on the <a href="http://viewdns.info/api/">API plans</a> page.</p>
+
+<p>This is only a small selection of the tools available from ViewDNS.</p>
+
+<p><a href="#find-the-ip-address-location">Find the IP address location</a><br />
+<a href="#find-the-abuse-contact-info-for-a-domain">Find the Abuse contact info for a domain</a><br />
+<a href="#find-the-ping-response-time-from-a-remote-system">Find the ping response time from a remote system</a></p>
+
+<p><a href="#status-codes-and-errors">Status Codes and Errors</a></p>
+
+<h2 id="find-the-ip-address-location">Find the IP address location</h2>
+
+<p>Find the city, country, latitude and longitude, and other information about an IP address.</p>
+
+<h3 id="method-and-url">Method and URL</h3>
+
+<p><code class="highlighter-rouge">GET http://pro.viewdns.info/iplocation/</code></p>
+
+<h3 id="sample-request-and-query-parameters">Sample Request and Query Parameters</h3>
+
+<p><code class="highlighter-rouge">curl -X GET http://pro.viewdns.info/iplocation/?ip=12.34.56.78&amp;apikey=yourapikey&amp;output=output_type</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>ip</strong></td>
+      <td>The IP address to find the location for</td>
+      <td>URL parameter</td>
+      <td>Required</td>
+      <td>IPv4 support only</td>
+    </tr>
+    <tr>
+      <td><strong>apikey</strong></td>
+      <td>Your ViewDNS API key</td>
+      <td>URL parameter</td>
+      <td>Required</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>output</strong></td>
+      <td>The output format of the response</td>
+      <td>URL parameter</td>
+      <td>Required</td>
+      <td><strong>json</strong> or <strong>xml</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="sample-response">Sample Response</h3>
+
+<p><strong>NOTE</strong> - the exact responses returned (city, zipcode, region_code, etc) will vary depending on the information available for an IP address.</p>
+
+<p><strong>JSON response (output=json)</strong></p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"tool"</span><span class="p">:</span><span class="w"> </span><span class="s2">"iplocation_PRO"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"ip"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12.34.56.78"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anytown"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"zipcode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"region_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"AA"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"region_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"State"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"country_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"United States"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"latitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"39.9968"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"longitude"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-82.9882"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"gmt_offset"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"dst_offset"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+<p><br /></p>
+
+<p><strong>XML response (output=xml)</strong></p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version='1.0' encoding='ISO-8859-1'?&gt;</span>
+<span class="nt">&lt;viewdns&gt;</span>
+  <span class="nt">&lt;query&gt;</span>
+    <span class="nt">&lt;tool&gt;</span>iplocation_PRO<span class="nt">&lt;/tool&gt;</span>
+    <span class="nt">&lt;ip&gt;</span>12.34.56.78<span class="nt">&lt;/ip&gt;</span>
+  <span class="nt">&lt;/query&gt;</span>
+  <span class="nt">&lt;response&gt;</span>
+    <span class="nt">&lt;city&gt;</span>Anytown<span class="nt">&lt;/city&gt;</span>
+    <span class="nt">&lt;zipcode&gt;</span>12345<span class="nt">&lt;/zipcode&gt;</span>
+    <span class="nt">&lt;region_code&gt;</span>AA<span class="nt">&lt;/region_code&gt;</span>
+    <span class="nt">&lt;region_name&gt;</span>State<span class="nt">&lt;/region_name&gt;</span>
+    <span class="nt">&lt;country_code&gt;</span>US<span class="nt">&lt;/country_code&gt;</span>
+    <span class="nt">&lt;country_name&gt;</span>United States<span class="nt">&lt;/country_name&gt;</span>
+    <span class="nt">&lt;latitude&gt;</span>39.9968<span class="nt">&lt;/latitude&gt;</span>
+    <span class="nt">&lt;longitude&gt;</span>-82.9882<span class="nt">&lt;/longitude&gt;</span>
+    <span class="nt">&lt;gmt_offset&gt;&lt;/gmt_offset&gt;</span>
+    <span class="nt">&lt;dst_offset&gt;&lt;/dst_offset&gt;</span>
+  <span class="nt">&lt;/response&gt;</span>
+<span class="nt">&lt;/viewdns&gt;</span>
+</code></pre>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>viewdns</strong></td>
+      <td>Top level XML only</td>
+      <td>viewdns data object</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>query</strong></td>
+      <td>Top level</td>
+      <td>JSON object (json) / query data object (xml)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>query/<strong>tool</strong></td>
+      <td>Name of lookup tool</td>
+      <td>string</td>
+      <td>Tool name is <strong>iplocation_PRO</strong></td>
+    </tr>
+    <tr>
+      <td>query/<strong>ip</strong></td>
+      <td>IP address queried</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>response</strong></td>
+      <td>IP query response</td>
+      <td>JSON object (json) / query data object (xml)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>response/<strong>city</strong></td>
+      <td>City location</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>response/<strong>zipcode</strong></td>
+      <td>Zip code location</td>
+      <td>string</td>
+      <td>Zip code or Postal code</td>
+    </tr>
+    <tr>
+      <td>response/<strong>region_code</strong></td>
+      <td>Two letter region or state code</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>response/<strong>region_name</strong></td>
+      <td>Common name for region</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>response/<strong>country_code</strong></td>
+      <td>Two letter country code</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>response/<strong>country_name</strong></td>
+      <td>Common name for country</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>response/<strong>latitude</strong></td>
+      <td>Latitude of IP location</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>response/<strong>longitude</strong></td>
+      <td>Longitude of IP location</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>response/<strong>gmt_offset</strong></td>
+      <td>Offset from GMT</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>response/<strong>dst_offset</strong></td>
+      <td>Offset for DST</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h2 id="find-the-abuse-contact-info-for-a-domain">Find the Abuse contact info for a domain</h2>
+
+<p>Look up the Abuse contact info for a domain in order to send complaints/warnings about spam or other malicious behavior.</p>
+
+<h3 id="method-and-url-1">Method and URL</h3>
+
+<p><code class="highlighter-rouge">GET http://pro.viewdns.info/abuselookup</code></p>
+
+<h3 id="sample-request-and-query-parameters-1">Sample Request and Query Parameters</h3>
+
+<p><code class="highlighter-rouge">curl -X GET "http://pro.viewdns.info/abuselookup/?domain=example.com&amp;apikey=yourapikey&amp;output=output_type"</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>domain</strong></td>
+      <td>The domain where you need to find the abuse contact info</td>
+      <td>URL parameter</td>
+      <td>Required</td>
+      <td>This is in the format of <strong>example.com</strong>, not <strong>www.example.com</strong></td>
+    </tr>
+    <tr>
+      <td><strong>apikey</strong></td>
+      <td>Your ViewDNS API key</td>
+      <td>URL parameter</td>
+      <td>Required</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>output</strong></td>
+      <td>The output format of the response</td>
+      <td>URL parameter</td>
+      <td>Required</td>
+      <td><strong>xml</strong> or <strong>json</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="sample-response-1">Sample Response</h3>
+
+<p><strong>JSON response (output=json)</strong></p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nt">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nt">"tool"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abusecontact_PRO"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"domain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example.com"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+   </span><span class="nt">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nt">"abusecontact"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abuse@example.com"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+<p><br /></p>
+
+<p><strong>XML response (output=xml)</strong></p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version='1.0' encoding='ISO-8859-1'?&gt;</span>
+<span class="nt">&lt;viewdns&gt;</span>
+  <span class="nt">&lt;query&gt;</span>
+     <span class="nt">&lt;tool&gt;</span>abusecontact_PRO<span class="nt">&lt;/tool&gt;</span>
+     <span class="nt">&lt;domain&gt;</span>example.com<span class="nt">&lt;/domain&gt;</span>
+  <span class="nt">&lt;/query&gt;</span>
+<span class="nt">&lt;response&gt;</span>
+    <span class="nt">&lt;abusecontact&gt;</span>abuse@example.com<span class="nt">&lt;/abusecontact&gt;</span>
+<span class="nt">&lt;/response&gt;</span>
+<span class="nt">&lt;/viewdns&gt;</span>
+</code></pre>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>viewdns</strong></td>
+      <td>Top level XML only</td>
+      <td>viewdns data object</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>query</strong></td>
+      <td>Query response</td>
+      <td>JSON object (json) / query data object (xml)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>query/<strong>tool</strong></td>
+      <td>Name of lookup tool</td>
+      <td>string</td>
+      <td>Tool name is <strong>abusecontact_PRO</strong></td>
+    </tr>
+    <tr>
+      <td>query/<strong>domain</strong></td>
+      <td>Domain queried</td>
+      <td>string</td>
+      <td>URL of the domain name queried</td>
+    </tr>
+    <tr>
+      <td><strong>response</strong></td>
+      <td>The API response</td>
+      <td>JSON object (json) / response data object (xml)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>response/<strong>abusecontact</strong></td>
+      <td>E-mail address of the abuse contact for the domain</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h2 id="find-the-ping-response-time-from-a-remote-system">Find the ping response time from a remote system</h2>
+
+<p>Find the response time using <code class="highlighter-rouge">ping</code> from a remote server to the ViewDNS server in order to troubleshoot or test network latency.</p>
+
+<h3 id="method-and-url-2">Method and URL</h3>
+
+<p><code class="highlighter-rouge">GET http://pro.viewdns.info/ping/</code></p>
+
+<h3 id="sample-request-and-query-parameters-2">Sample Request and Query Parameters</h3>
+
+<p><code class="highlighter-rouge">curl -X GET http://pro.viewdns.info/ping/?host=example.com&amp;apikey=yourapikey&amp;output=output_type</code></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>host</strong></td>
+      <td>Domain name or IP address to ping</td>
+      <td>URL parameter</td>
+      <td>Required</td>
+      <td>IPv4 support only</td>
+    </tr>
+    <tr>
+      <td><strong>apikey</strong></td>
+      <td>Your ViewDNS API key</td>
+      <td>URL parameter</td>
+      <td>Required</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>output</strong></td>
+      <td>The output format of the response</td>
+      <td>URL parameter</td>
+      <td>Required</td>
+      <td><strong>json</strong> or <strong>xml</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="sample-response-2">Sample Response</h3>
+
+<p><strong>JSON response (output=json)</strong></p>
+
+<div class="language-json highlighter-rouge"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="nt">"query"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"tool"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ping_PRO"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"example.com"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nt">"response"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"replys"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"rtt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"32.5 ms"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"rtt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"36.2 ms"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"rtt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30.8 ms"</span><span class="w">
+            </span><span class="p">},</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nt">"rtt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"36.6 ms"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+</div>
+<p><br /></p>
+
+<p><strong>XML response (output=xml)</strong></p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version='1.0' encoding='ISO-8859-1'?&gt;</span>
+<span class="nt">&lt;viewdns&gt;</span>
+  <span class="nt">&lt;query&gt;</span>
+    <span class="nt">&lt;tool&gt;</span>ping_PRO<span class="nt">&lt;/tool&gt;</span>
+    <span class="nt">&lt;host&gt;</span>example.com<span class="nt">&lt;/host&gt;</span>
+  <span class="nt">&lt;/query&gt;</span>
+  <span class="nt">&lt;response&gt;</span>
+    <span class="nt">&lt;rtt&gt;</span>32.5 ms<span class="nt">&lt;/rtt&gt;</span>
+    <span class="nt">&lt;rtt&gt;</span>36.2 ms<span class="nt">&lt;/rtt&gt;</span>
+    <span class="nt">&lt;rtt&gt;</span>30.8 ms<span class="nt">&lt;/rtt&gt;</span>
+    <span class="nt">&lt;rtt&gt;</span>36.6 ms<span class="nt">&lt;/rtt&gt;</span>
+  <span class="nt">&lt;/response&gt;</span>
+<span class="nt">&lt;/viewdns&gt;</span>
+</code></pre>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Element</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>viewdns</strong></td>
+      <td>Top level XML only</td>
+      <td>viewdns data object</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>query</strong></td>
+      <td>Query response</td>
+      <td>JSON object (json) / query data object (xml)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>query/<strong>tool</strong></td>
+      <td>Name of lookup tool</td>
+      <td>string</td>
+      <td>Tool name is <strong>ping_PRO</strong></td>
+    </tr>
+    <tr>
+      <td>query/<strong>host</strong></td>
+      <td>Domain or IP address queried</td>
+      <td>string</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td><strong>response</strong></td>
+      <td>Ping query response</td>
+      <td>JSON object (json) / response data object (xml)</td>
+      <td><strong>NOTE</strong> - if there is no ping response the reply will be empty</td>
+    </tr>
+    <tr>
+      <td>response/<strong>replys</strong></td>
+      <td>Ping replies</td>
+      <td>JSON array</td>
+      <td>Not available in XML response</td>
+    </tr>
+    <tr>
+      <td>response/<strong>rtt</strong></td>
+      <td>Ping response time</td>
+      <td>string</td>
+      <td>The time for the ping response to return  to the ViewDNS servers</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="status-codes-and-errors">Status Codes and Errors</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Description</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>200</strong></td>
+      <td>OK</td>
+      <td>The API will return a 200/OK for everything <strong>except</strong> a 404/Not found</td>
+    </tr>
+    <tr>
+      <td><strong>404</strong></td>
+      <td>Not found</td>
+      <td>API endpoint not found</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+    <div class="tags">
+        
+    </div>
+
+    
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2016 Alan Bowman. All rights reserved. <br />
+ Site last generated: Oct 8, 2016 <br />
+<!-- <p><img src="images/company_logo.png" alt="Company logo"/></p> -->
+                </div>
+            </div>
+</footer>
+
+
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+    </div>
+
+</body>
+
+</html>
