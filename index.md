@@ -11,7 +11,7 @@ My name is Alan Bowman and I’m an experienced technical writer currently seeki
 **Useful links:**  
 
 [**Portfolio**](/portfolio.html) - some examples of my work and how I work   
-Resume - my resume in several formats (PDF, .docx, .odt, .txt)   
+[**Resume**](/resume.html) - my resume in several formats (PDF, .docx, .odt, .txt)   
 [**LinkedIn**](https://www.linkedin.com/in/ralanbowman) - my professional network profile   
 [**Contact info**](/contact_info.html) - my e-mail address, Twitter, Facebook, and IM info   
 

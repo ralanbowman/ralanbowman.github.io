@@ -7,7 +7,7 @@ topnav:
      url: /contact_info.html
 
    - title: Resume
-     url: /resumes.html
+     url: /resume.html
 
 #Topnav dropdowns
 topnav_dropdowns:

@@ -1,0 +1,52 @@
+ROBERT ALAN BOWMAN
+
+alanbowman@gmail.com | alanbowman.net | linkedin.com/in/ralanbowman | (678) 665-9458
+
+Experienced Technical Writer and User Advocate | API Documentation, User Guides, READMEs, man pages
+
+PROFESSIONAL EXPERIENCE
+=======================
+
+eApps Web Hosting -  Atlanta, Georgia	April 2007 to August 2016
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Technical Writer and User Advocate, October 2010 - August 2016
+--------------------------------------------------------------
+* Standardized the process to create, update, & maintain all customer-facing documentation
+* Improved ability of customers to find answers through self-service instead of contacting support 
+* Designed a company style guide & word list used across all departments 
+* Helped overhaul the existing testing/QA process into a more streamlined system that reduced time required to launch new products & services from months to weeks 
+* Created an internal system for staff to report any user advocacy issues & designed a reporting structure to get those issues to management 
+* Consulted with the Dev, Website, and Sales teams to review new products & services to ensure a consistent & easy to use UX/UI
+
+Technical Support and System/Network Administrator, April 2007 - September 2010
+-------------------------------------------------------------------------------
+* Resolved support requests from users via phone, e-mail, or online chat
+* Monitored & helped maintain network uptime and security 
+* Moved new products and services into production as directed by Dev & Sales teams 
+* Worked with NetOps team to troubleshoot & repair any network or system outages 
+
+
+Carestream Dental - Atlanta, Georgia	October 1998 to April 2007
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Systems Engineer/Technical Support Analyst
+------------------------------------------
+(Note - I held the same job supporting the same product & customers through 3 rounds of mergers & acquisitions: Orthotrac - PracticeWorks - Kodak Dental Systems - Carestream Dental)
+* Resolved all escalated hardware and operating system issues from junior team members 
+* Trained new employees to support an SCO UNIX & COBOL hardware/software orthodontic practice management system 
+* Developed & maintained a product-specific knowledge-base system used by team members and customers for training & to help resolve support issues
+* Consulted with Sales & Training teams to recommend system and software upgrades to legacy customers
+* Scheduled & managed customer hardware upgrades & existing system replacements
+
+EDUCATION & CERTIFICATIONS
+==========================
+
+Clayton State University - Morrow, Georgia 
+* Bachelor of Science, Integrative Studies - Project Supervision in a Technological Environment Concentration  2016
+
+Kennesaw State University - Kennesaw, Georgia 
+* Basic and Advanced Technical Writing Certificates - College of Continuing and Professional Education  2008 
+
+Udemy - udemy.com 
+* Learn API Technical Writing: JSON and XML for Writers / Learn API Technical Writing 2: REST for Writers / The Art of API Writing  2015 - 2016
