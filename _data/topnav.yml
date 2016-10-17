@@ -27,6 +27,8 @@ topnav_dropdowns:
           url: /sphinx_install.html
         - title: User Personas
           url: /personas.html
+        - title: Document Design - Basic Principles
+          url: /doc_design.html
         - title: Style Guide and Word List
           url: /styleguide-wordlist.html
         - title: How I work

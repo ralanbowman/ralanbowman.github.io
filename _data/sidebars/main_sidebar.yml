@@ -56,6 +56,10 @@ entries:
       url: /personas.html
       output: web, pdf
 
+    - title: Document Design - Basic Principles
+      url: /doc_design.html
+      output: web, pdf
+
     - title: Style Guide and Word List
       url: /styleguide-wordlist.html
       output: web, pdf
