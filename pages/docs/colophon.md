@@ -13,7 +13,6 @@ This website was built with the following applications:
 
 The source for this website is located here: [https://github.com/ralanbowman/ralanbowman.github.io](https://github.com/ralanbowman/ralanbowman.github.io "Github repo")  
 
----
 <!--
 <center>This website is dedicated to the loving memory of my wife, Helly.</center>
 
