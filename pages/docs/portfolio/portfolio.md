@@ -17,7 +17,7 @@ The **Document Design: Basic Principles** presentation was given at the August 2
 
 The Style Guide and Word List were created to ensure that all company communications (documentation, website copy, marketing releases, etc.) were consistent in style and wording. 
 
-The How I work section explains some of the tools and methodologies I’ve used to manage projects and produce documentation.
+The How I Work section explains some of the tools and methodologies I’ve used to manage projects and produce documentation.
  
 * [**UsesThis / The Setup API**](/uses-this-api.html) - documentation for a small RESTful JSON API 
 * [**ViewDNS API**](/viewdns-api.html) - documentation for a small selection of RESTful API calls in JSON and XML
@@ -26,5 +26,5 @@ The How I work section explains some of the tools and methodologies I’ve used 
 * [**User Personas**](/personas.html) - a set of personas created to help plan documentation updates for a web hosting company 
 * [**Document Design: Basic Principles**](/doc_design.html)  - an overview of four basic principles of document design   
 * [**Style Guide and Word List**](/styleguide-wordlist.html) - a simple style guide and word list created to make sure that all documentation was consistent 
-* [**How I work**](/how_work.html) - an overview of  tools and methods 
+* [**How I Work**](/how_work.html) - an overview of  tools and methods 
 

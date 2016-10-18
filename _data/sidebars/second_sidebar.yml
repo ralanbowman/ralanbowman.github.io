@@ -64,7 +64,7 @@ entries:
       url: /styleguide-wordlist.html
       output: web, pdf
 
-    - title: How I work
+    - title: How I Work
       url: how_work.html
       output: web, pdf
 

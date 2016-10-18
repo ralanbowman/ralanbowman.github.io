@@ -1,5 +1,5 @@
 ---
-title: How I work
+title: How I Work
 sidebar: second_sidebar
 toc: false
 permalink: how_work.html
