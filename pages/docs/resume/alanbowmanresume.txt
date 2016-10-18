@@ -35,7 +35,7 @@ Systems Engineer/Technical Support Analyst
 (Note - I held the same job supporting the same product & customers through 3 rounds of mergers & acquisitions: Orthotrac - PracticeWorks - Kodak Dental Systems - Carestream Dental)
 * Resolved all escalated hardware and operating system issues from junior team members 
 * Trained new employees to support an SCO UNIX & COBOL hardware/software orthodontic practice management system 
-* Developed & maintained a product-specific knowledge-base system used by team members and customers for training & to help resolve support issues
+* Developed & maintained a product-specific knowledge-base system used by team members and customers for training & helping to resolve support issues
 * Consulted with Sales & Training teams to recommend system and software upgrades to legacy customers
 * Scheduled & managed customer hardware upgrades & existing system replacements
 
