@@ -29,7 +29,7 @@ The server can be either a standalone physical server or a virtual server. My cu
 You will also need:
 
 * root access to the server over SSH
-* A My Atlassian account - https://my.atlassian.com/
+* A My Atlassian account - [https://my.atlassian.com/](https://my.atlassian.com/)  
 * A valid Confluence license for the correct number of users (purchased from your My Atlassian account)
 
 This install guide assumes that you are able to connect to the command line of the server using an SSH client, work as the root user, and are able to navigate the Linux file system, install and configure software, and edit files using a text editor. I realize that you may not have all these skills, so I will try and explain as much as I can without getting bogged down into too much detail. I can answer any questions you may have about the specifics of certain commands if needed.
@@ -370,8 +370,4 @@ If you're interested in learning how to use Vim, there is a built-in tutorial ca
 [root@example ~]# vimtutor
 ```
 If you work with Linux or UNIX systems on a regular basis, knowing Vim can be a huge benefit. Even just knowing some of the basics will make your life much easier. 
-
-
-
-
 
