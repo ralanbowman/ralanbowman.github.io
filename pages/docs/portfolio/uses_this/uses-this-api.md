@@ -94,14 +94,14 @@ Returns a basic list of all interviews currently available.
 | Element     |   Description   |   Type   |   Notes   |
 |-------------|-----------------|----------|-----------|
 |  **interviews**  |  Basic interview information   |   JSON array   |  |
-|  interviews/**slug**  |    Page ID    |  string   |  In "first.last" name format    |
-|  interviews/**name**  |    Full name  |  string   |  First and last name    |
-|  interviews/**url**  |    Link to full interview        |  string   |  |
-|  interviews/**summary**  |    Summary of the interview        |  string   |  |
-|  interviews/**date**  |    Date interview was posted  |  integer   |  **date** is in UNIX epoch time    |
-|  interviews/**categories**  |    List of categories for the interview  |  JSON array   |  |
-|  interviews/**credits**  |    Photo credit for interview picture    |  JSON object   |  Credit is only listed when provided by subject    |
-|  interviews/credits/**name**  |    Name of photographer        |  string   |  &nbsp;    |
+|  **slug**  |    Page ID    |  string   |  In "first.last" name format    |
+|  **name**  |    Full name  |  string   |  First and last name    |
+|  **url**  |    Link to full interview        |  string   |  |
+|  **summary**  |    Summary of the interview        |  string   |  |
+|  **date**  |    Date interview was posted  |  integer   |  **date** is in UNIX epoch time    |
+|  **categories**  |    List of categories for the interview  |  JSON array   |  |
+|  **credits**  |    Photo credit for interview picture    |  JSON object   |  Credit is only listed when provided by subject    |
+|  **name**  |    Name of photographer        |  string   |  &nbsp;    |
 
 <br />
 
@@ -169,18 +169,18 @@ Return a specific interview for a given *slug*, including gear (hardware and sof
 | Element     |   Description   |   Type   |   Notes   |
 |-------------|-----------------|----------|-----------|
 |  **interviews**  |  Basic interview information   |   JSON array   |  |
-|  interviews/**slug**  |    Page ID    |  string   |  In "first.last" name format    |
-|  interviews/**name**  |    Full name  |  string   |  First and last name    |
-|  interviews/**url**  |    Link to full interview        |  string   |  |
-|  interviews/**summary**  |    Summary of the interview        |  string   |  |
-|  interviews/**date**  |    Date interview was posted  |  integer   |  **date** is in UNIX epoch time    |
-|  interviews/**categories**  |    List of categories for the interview  |  JSON array   |  |
-|  interviews/**credits**  |    Photo credit for interview picture    |  JSON object   |  Credit is only listed when provided by subject    |
-|  interviews/credits/**name**  |    Name of photographer        |  string   |  &nbsp;    |
-|  interviews/**contents**  |    Interview contents, in Markdown format  |  string   |  &nbsp;    |
-|  interviews/**gear**  |    List of hardware and software  |  JSON array   |  &nbsp;  |
-|  interviews/gear/**hardware**  |  Hardware used      |  JSON object   |  &nbsp;    |
-|  interviews/gear/**software**  |    Software used    |  JSON object   |  &nbsp;    |
+|  **slug**  |    Page ID    |  string   |  In "first.last" name format    |
+|  **name**  |    Full name  |  string   |  First and last name    |
+|  **url**  |    Link to full interview        |  string   |  |
+|  **summary**  |    Summary of the interview        |  string   |  |
+|  **date**  |    Date interview was posted  |  integer   |  **date** is in UNIX epoch time    |
+|  **categories**  |    List of categories for the interview  |  JSON array   |  |
+|  **credits**  |    Photo credit for interview picture    |  JSON object   |  Credit is only listed when provided by subject    |
+|  **name**  |    Name of photographer        |  string   |  &nbsp;    |
+|  **contents**  |    Interview contents, in Markdown format  |  string   |  &nbsp;    |
+|  **gear**  |    List of hardware and software  |  JSON array   |  &nbsp;  |
+|  **hardware**  |  Hardware used      |  JSON object   |  &nbsp;    |
+|  **software**  |    Software used    |  JSON object   |  &nbsp;    |
 
 
 <br />
@@ -277,12 +277,12 @@ Returns a list of all interviews available in a specified category.
 | Element     |   Description   |   Type   |   Notes   |
 |-------------|-----------------|----------|-----------|
 |  **interviews**  |  Basic interview information   |   JSON array   |  |
-|  interviews/**slug**  |    Page ID    |  string   |  In "first.last" name format    |
-|  interviews/**name**  |    Full name  |  string   |  First and last name    |
-|  interviews/**url**  |    Link to full interview        |  string   |  |
-|  interviews/**summary**  |    Summary of the interview        |  string   |  |
-|  interviews/**date**  |    Date interview was posted  |  integer   |  **date** is in UNIX epoch time    |
-|  interviews/**categories**  |    List of categories for the interview  |  JSON array   |  |
+|  **slug**  |    Page ID    |  string   |  In "first.last" name format    |
+|  **name**  |    Full name  |  string   |  First and last name    |
+|  **url**  |    Link to full interview        |  string   |  |
+|  **summary**  |    Summary of the interview        |  string   |  |
+|  **date**  |    Date interview was posted  |  integer   |  **date** is in UNIX epoch time    |
+|  **categories**  |    List of categories for the interview  |  JSON array   |  |
 
 <br />
 
@@ -346,8 +346,8 @@ For software:
 | Element     |   Description   |   Type   |   Notes   |
 |-------------|-----------------|----------|-----------|
 |  **gear**  |    List of gear        |  JSON array   |  &nbsp;    |
-|  gear/**slug**  |    Page ID    |  string   |  Will be in "dashed-word-format" if more than one word   |
-|  gear/**name**  |    Gear name        |  string   |  Will be a proper name    |
+|  **slug**  |    Page ID    |  string   |  Will be in "dashed-word-format" if more than one word   |
+|  **name**  |    Gear name        |  string   |  Will be a proper name    |
 
 <br />
 
@@ -407,13 +407,13 @@ For software:
 | Element     |   Description   |   Type   |   Notes   |
 |-------------|-----------------|----------|-----------|
 |  **gear**  |    List of gear   |  JSON object   |  &nbsp;    |
-|  gear/**slug**  |    Page ID    |  string   |   Will be in "dashed-word-format" if more than one word   |
-|  gear/**name**  |    Gear name    |  string   |  Will be a proper name    |
-|  gear/**description**  |   Short description     |  string   |  &nbsp;    |
-|  gear/**url**  |    Vendor website    |  string   |  &nbsp;    |
-|  gear/**interviews**  |    All related interviews  |  JSON array   |  &nbsp;    |
-|  gear/interviews/**slug**  |    Page ID   |  string   |  In "first.last" name format    |
-|  gear/interviews/**name**  |    Full name        | string   |  First and last name    |
+|  **slug**  |    Page ID    |  string   |   Will be in "dashed-word-format" if more than one word   |
+|  **name**  |    Gear name    |  string   |  Will be a proper name    |
+|  **description**  |   Short description     |  string   |  &nbsp;    |
+|  **url**  |    Vendor website    |  string   |  &nbsp;    |
+|  **interviews**  |    All related interviews  |  JSON array   |  &nbsp;    |
+|  **slug**  |    Page ID   |  string   |  In "first.last" name format    |
+|  **name**  |    Full name        | string   |  First and last name    |
 
 <br />
 
@@ -483,8 +483,8 @@ For software:
 | Element     |   Description   |   Type   |   Notes   |
 |-------------|-----------------|----------|-----------|
 |  **gear**  |    List of gear    |  JSON array   |  &nbsp;    |
-|  gear/**slug**  |    Page ID        |  string   |  Will be in "dashed-word-format" if more than one word    |
-|  gear/**count**  |    Number of times gear is mentioned  |  integer   |  &nbsp;    |
+|  **slug**  |    Page ID        |  string   |  Will be in "dashed-word-format" if more than one word    |
+|  **count**  |    Number of times gear is mentioned  |  integer   |  &nbsp;    |
 
 <br />
 

@@ -106,19 +106,19 @@ Find the city, country, latitude and longitude, and other information about an I
 |---------|-------------|------|-------|
 | **viewdns** | Top level XML only | viewdns data object | |
 | **query** | Top level | JSON object (json) / query data object (xml) | |
-| query/**tool** | Name of lookup tool | string | Tool name is **iplocation_PRO** | 
-| query/**ip** | IP address queried | string | |
+| **tool** | Name of lookup tool | string | Tool name is **iplocation_PRO** | 
+| **ip** | IP address queried | string | |
 | **response** | IP query response | JSON object (json) / query data object (xml) |  |
-| response/**city** | City location | string |  | 
-| response/**zipcode** | Zip code location | string | Zip code or Postal code | 
-| response/**region_code** | Two letter region or state code | string | | 
-| response/**region_name** | Common name for region | string | | 
-| response/**country_code** | Two letter country code | string | |
-| response/**country_name** | Common name for country | string | | 
-| response/**latitude** | Latitude of IP location | string | |
-| response/**longitude** | Longitude of IP location | string | |
-| response/**gmt_offset** | Offset from GMT | string | |
-| response/**dst_offset** | Offset for DST | string | |
+| **city** | City location | string |  | 
+| **zipcode** | Zip code location | string | Zip code or Postal code | 
+| **region_code** | Two letter region or state code | string | | 
+| **region_name** | Common name for region | string | | 
+| **country_code** | Two letter country code | string | |
+| **country_name** | Common name for country | string | | 
+| **latitude** | Latitude of IP location | string | |
+| **longitude** | Longitude of IP location | string | |
+| **gmt_offset** | Offset from GMT | string | |
+| **dst_offset** | Offset for DST | string | |
 
 <br />
 
@@ -178,10 +178,10 @@ Look up the Abuse contact info for a domain in order to send complaints/warnings
 |---------|-------------|------|-------|
 | **viewdns** | Top level XML only | viewdns data object | | 
 | **query** | Query response | JSON object (json) / query data object (xml) | |
-| query/**tool** | Name of lookup tool | string | Tool name is **abusecontact_PRO** |
-| query/**domain** | Domain queried | string | URL of the domain name queried |
+| **tool** | Name of lookup tool | string | Tool name is **abusecontact_PRO** |
+| **domain** | Domain queried | string | URL of the domain name queried |
 | **response** | The API response | JSON object (json) / response data object (xml) | |
-| response/**abusecontact** | E-mail address of the abuse contact for the domain | string | |
+| **abusecontact** | E-mail address of the abuse contact for the domain | string | |
 
 <br />
 
@@ -256,11 +256,11 @@ Find the response time using `ping` from a remote server to the ViewDNS server i
 |-------------|-----------------|----------|-----------|
 | **viewdns** | Top level XML only | viewdns data object | |
 | **query** | Query response | JSON object (json) / query data object (xml) | |
-| query/**tool** | Name of lookup tool | string | Tool name is **ping_PRO** | 
-| query/**host** | Domain or IP address queried | string | |
+| **tool** | Name of lookup tool | string | Tool name is **ping_PRO** | 
+| **host** | Domain or IP address queried | string | |
 | **response** | Ping query response | JSON object (json) / response data object (xml) | **NOTE** - if there is no ping response the reply will be empty |
-| response/**replys** | Ping replies | JSON array | Not available in XML response |
-| response/**rtt** | Ping response time | string | The time for the ping response to return  to the ViewDNS servers |
+| **replys** | Ping replies | JSON array | Not available in XML response |
+| **rtt** | Ping response time | string | The time for the ping response to return  to the ViewDNS servers |
 
 ---
 
