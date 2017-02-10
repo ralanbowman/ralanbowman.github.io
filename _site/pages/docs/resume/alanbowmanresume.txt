@@ -7,6 +7,17 @@ Experienced Technical Writer and User Advocate | API Documentation, User Guides,
 PROFESSIONAL EXPERIENCE
 =======================
 
+Reliam Managed Services - Los Angles, California November 2016 to present 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Contract Technical Writer 
+-------------------------
+* Creating polices and procedure documentation to help client pass the AWS Partner Network (APN) audit
+* Reviewing, creating, and managing the documentation plan based on APN requirements
+* Working with company engineers, operations, and executives to identify current policies and procedures, and helping to devise and create policies and procedures where none exist
+* Advising the client on formatting and documentation best practices 
+
+
 eApps Web Hosting -  Atlanta, Georgia	April 2007 to August 2016
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -16,6 +27,7 @@ Technical Writer and User Advocate, October 2010 - August 2016
 * Improved ability of customers to find answers through self-service instead of contacting support 
 * Designed a company style guide and word list used across all departments 
 * Helped overhaul the existing testing/QA process into a more streamlined system that reduced time required to launch new products and services from months to weeks 
+* Assisted moving the company from an ad-hoc project management system and SCM system to JIRA, Confluence, and Bitbucket Server 
 * Created an internal system for staff to report any user advocacy issues and designed a reporting structure to get those issues to management 
 * Consulted with the Development, Website, and Sales teams to review new products and services to ensure a consistent and easy to use UX/UI
 
