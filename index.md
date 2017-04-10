@@ -15,14 +15,14 @@ My name is Alan Bowman and I’m an experienced technical writer currently seeki
 [**LinkedIn**](https://www.linkedin.com/in/ralanbowman) - my professional network profile   
 [**Contact info**](/contact_info.html) - my e-mail address, Twitter, Facebook, and IM info   
 
-As a technical writer, my job is to understand the user: their reasons for using the product or service, their level of technical ability, and their desired end result, and then provide them with exactly the information they need so they can build products and services that help change the world. I document the tool, not the technology.  
+As a technical writer, my job is to understand the user: their reasons for using the product or service, their level of technical ability, and their desired end result, and then provide them with exactly the information they need so they can build products and services that help change the world. I document the task, not the technology.  
 
 As a technical writer, my job is to also understand the needs of the business: the industry they’re in, the marketing strategy and sales goals, and the overall objectives of the company, and then make sure that the information I provide to the customer reflects the company's image and plan of action.   
 
 My skills as a technical writer include:   
 
-* Documentation for RESTful APIs (JSON and XML)
 * User guides and release notes 
+* Documentation for RESTful APIs (JSON and XML)
 * READMEs and man pages for command line UNIX/Linux/*BSD applications 
 * Documentation for platform APIs using Doxygen and Javadoc (limited experience)
 * JavaScript function/method documentation (limited experience) 
