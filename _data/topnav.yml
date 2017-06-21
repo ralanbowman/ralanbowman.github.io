@@ -22,7 +22,7 @@ topnav_dropdowns:
         - title: ViewDNS API
           url: /viewdns-api.html
         - title: Confluence Install Guide
-          url: /confluence_install.html
+          url: /confluence-install.html
         - title: Sphinx Install Guide
           url: /sphinx_install.html
         - title: User Personas

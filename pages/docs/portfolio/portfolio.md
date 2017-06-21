@@ -21,7 +21,7 @@ The How I Work section explains some of the tools and methodologies I’ve used 
  
  * [**UsesThis / The Setup API**](/uses-this-api.html) - documentation for a small RESTful JSON API 
  * [**ViewDNS API**](/viewdns-api.html) - documentation for a small selection of RESTful API calls in JSON and XML
- * [**Confluence install guide**](/confluence_install.html) - instructions on how to install Confluence on a Linux server 
+ * [**Confluence install guide**](/confluence-install.html) - instructions on how to install Confluence on a Linux server 
  * [**Sphinx install guide**](sphinx_install.html) - instructions on how to install the Sphinx documentation platform on a Linux server 
  * [**User Personas**](/personas.html) - a set of personas created to help plan documentation updates for a web hosting company 
  * [**Document Design: Basic Principles**](/doc_design.html)  - an overview of four basic principles of document design   

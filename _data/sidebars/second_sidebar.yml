@@ -45,7 +45,7 @@ entries:
       output: web, pdf
 
     - title: Confluence Install Guide
-      url: /confluence_install.html
+      url: /confluence-install.html
       output: web, pdf
 
     - title: Sphinx Install Guide
